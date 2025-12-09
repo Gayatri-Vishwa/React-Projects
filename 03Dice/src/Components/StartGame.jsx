@@ -23,31 +23,111 @@ function StartGame({toggle}) {
 export default StartGame
 
 
+const Container = styled.div`
+  max-width: 1180px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 10px;
 
-const Container =styled.div`
-max-width:1180px ;
-height: 100vh;
-display: flex;
-align-items: center;
-margin: 0 auto;              //center k liye
-
-.content{
+  .content {
     font-size: 60px;
     white-space: nowrap;
     display: flex;
     flex-direction: column;
-  align-items: end;
-}
-.image{
-    width: 50%;
-    height: 400px;
- 
-}
-img{
-    width: 522px;
-    height: 400px;
-    background-size: contain;
-}
+    align-items: flex-end;
+    gap: 20px;
+  }
 
+  .image {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* ----------------------------------
+        RESPONSIVE
+  ---------------------------------- */
+
+  /* 900px - tablet */
+  @media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+    gap: 30px;
+
+    .content {
+      font-size: 48px;
+      align-items: center;
+    }
+
+    .image {
+      width: 80%;
+    }
+  }
+
+  /* 600px - mobile */
+  @media (max-width: 600px) {
+    .content {
+      font-size: 36px;
+      gap: 16px;
+    }
+
+    img {
+      max-width: 320px;
+    }
+  }
+
+  /* 400px - small mobile */
+  @media (max-width: 400px) {
+    .content {
+      font-size: 28px;
+    }
+
+    img {
+      max-width: 260px;
+    }
+  }
 `;
+
+
+
+// const Container =styled.div`
+// max-width:1180px ;
+// height: 100vh;
+// display: flex;
+// align-items: center;
+// margin: 0 auto;              //center k liye
+
+// .content{
+//     font-size: 60px;
+//     white-space: nowrap;
+//     display: flex;
+//     flex-direction: column;
+//   align-items: end;
+// }
+// .image{
+//     width: 50%;
+//     height: 400px;
+ 
+// }
+// img{
+//     width: 522px;
+//     height: 400px;
+//     background-size: contain;
+// }
+
+// `;
 

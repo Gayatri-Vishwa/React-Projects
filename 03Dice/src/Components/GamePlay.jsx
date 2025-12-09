@@ -59,11 +59,11 @@ const handler=()=>{
      <NumberSelector error={error} setError={setError} selectedNumber={selectedNumber}     setSelectedNumber={setSelectedNumber}   /> 
 </div>
 
-  <div className='div2'>
+  <div className='div2 '>
      <RoleDice  currentDice={currentDice} roleDice={roleDice}/>
   </div>
 
-  <div className="btns">
+  <div className="btns ">
    <OutlineButton onClick={()=>setScore(0)}>Reset Score</OutlineButton>
     <Button 
     onClick={ handler} >
@@ -77,22 +77,108 @@ const handler=()=>{
 
 export default GamePlay
 
-const MainContainer=styled.main`
-.div1{
+const MainContainer = styled.main`
+  padding: 20px;
+
+  .div1 {
     display: flex;
-justify-content: space-around;
-padding-top: 70px
-}
-.btns{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-  font-size: 24px;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 70px;
+    gap: 20px;
+  }
 
-}
+  .div2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
 
+  .btns {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    font-size: 24px;
+  }
 
+  /* -------------------- RESPONSIVE -------------------- */
+  @media (max-width: 900px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .div1 {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 30px;
+      text-align: center;
+    }
+
+    .btns {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 10px;
+      margin:0 auto;
+
+    .div1 {
+      flex-direction: column;
+      gap: 15px;
+      padding-top: 20px;
+      margin:0 auto;
+    }
+    .div2 {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;  
+     
+    }
+
+    .btns {
+      width: 100%;
+      gap: 10px;
+        margin:0 auto;
+    }
+
+    .btns button {
+      width: 90%;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .btns button {
+      font-size: 16px;
+      padding: 10px 0;
+    }
+  }
 `;
+
+
+
+
+// const MainContainer=styled.main`
+// .div1{
+//     display: flex;
+// justify-content: space-around;
+// padding-top: 70px
+// }
+// .btns{
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   align-items: center;
+//   gap: 10px;
+//   margin-top: 20px;
+//   font-size: 24px;
+
+// }
+
+
+// `;
