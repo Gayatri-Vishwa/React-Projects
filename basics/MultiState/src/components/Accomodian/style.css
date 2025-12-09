@@ -1,0 +1,31 @@
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper{
+    width: 400px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin-top: 20px;
+}
+.item{
+    background: #4b4b0b;
+}
+.content ,.title{
+
+    color: #eeecec;
+}   
+
+h2{
+    background-color: rgb(79, 123, 4);
+    border :2px solid white;
+    color: white;
+    /* border-radius: 10px; */
+  
+}
