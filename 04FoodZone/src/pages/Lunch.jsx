@@ -8,7 +8,7 @@ const filteredData=foodData.filter((item)=> item.type=='lunch')
 
   return (
      <div   
-    className="w-full h-[642px]  bg-cover bg-center  flex justify-center"
+    className="w-full h-[100vh]  bg-cover bg-center  flex justify-center"
   style={{ backgroundImage: `url(${'./bg.png'})` }}
   >
 

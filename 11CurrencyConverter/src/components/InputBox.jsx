@@ -36,6 +36,8 @@ currencyDisable=false,
                        // onAmountChange && then we wite function it means if exists so no chances of error
                     // jsvascript events ki value ko string format me leleti h so use Number
                 />
+
+                
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
                 <p className="text-black/40 mb-2 w-full">Currency Type</p>

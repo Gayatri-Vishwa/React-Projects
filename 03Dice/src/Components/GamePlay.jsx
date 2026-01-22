@@ -71,7 +71,7 @@ const handler=()=>{
   </div>
 
   {visibleRules && <Rules/>} 
-    </MainContainer>
+    </MainContainer>    
   )
 }
 

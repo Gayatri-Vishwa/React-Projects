@@ -8,12 +8,12 @@ const filteredData=foodData.filter((item)=> item.type=='breakfast')
 
   return (
      <div   
-    className="w-full h-[642px]  bg-cover bg-center  flex justify-center"
+    className="w-full h-[100vh]  bg-cover bg-center  flex justify-center"
   style={{ backgroundImage: `url(${'./bg.png'})` }}
   >
 
 
-    <div className='w-[70%] mt-22 flex flex-wrap justify-center mx-auto px-auto gap-x-6   '>
+    <div className='w-[70%] mt-22 flex flex-wrap justify-center px-auto gap-x-6   '>
     {/* <div className='w-[70%] mt-22 mx-auto px-auto gap-x-6   grid grid-cols-3 gap-0'> */}
       {filteredData.map((item,idx)=>(
         <div key={idx} className=' h-[180px] '>

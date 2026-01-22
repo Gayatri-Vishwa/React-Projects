@@ -58,7 +58,7 @@
       price: 28,
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
       image: "/images/vadapav.jpeg",
-      type: "breakfast",
+      type: "lunch",
     },
         
         {
