@@ -56,9 +56,7 @@ const Container = styled.div`
     object-fit: contain;
   }
 
-  /* ----------------------------------
-        RESPONSIVE
-  ---------------------------------- */
+  /* ---------------------------------- RESPONSIVE--------------------- */
 
   /* 900px - tablet */
   @media (max-width: 900px) {
@@ -101,33 +99,3 @@ const Container = styled.div`
     }
   }
 `;
-
-
-
-// const Container =styled.div`
-// max-width:1180px ;
-// height: 100vh;
-// display: flex;
-// align-items: center;
-// margin: 0 auto;              //center k liye
-
-// .content{
-//     font-size: 60px;
-//     white-space: nowrap;
-//     display: flex;
-//     flex-direction: column;
-//   align-items: end;
-// }
-// .image{
-//     width: 50%;
-//     height: 400px;
- 
-// }
-// img{
-//     width: 522px;
-//     height: 400px;
-//     background-size: contain;
-// }
-
-// `;
-

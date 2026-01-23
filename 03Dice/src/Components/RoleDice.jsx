@@ -1,44 +1,37 @@
-import React from 'react'
-import styled from 'styled-components'
-
-function RoleDice({currentDice,roleDice}) {
 
 
+import React from "react";
+import styled from "styled-components";
 
+function RoleDice({ currentDice, roleDice }) {
   return (
-    <Dicecontainer className='dice'>
-        <div 
-        onClick={roleDice}>
-       <img src={`src/Images/${currentDice}dic.png`} alt="" />
-        </div>
-
-        <div >
-           <p>Click the Dice to role</p>
-        </div>  
-      
-    </Dicecontainer>
-  )
+    <DiceContainer>
+      <img
+        onClick={roleDice}
+        src={`/Images/${currentDice}dic.png`}
+        alt="dice"
+      />
+      <p>Click the Dice to roll</p>
+    </DiceContainer>
+  );
 }
 
-export default RoleDice
+export default RoleDice;
 
-const Dicecontainer=styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 48px;
-margin: 20px;
-width: auto;
+const DiceContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-
-p{
-    font-size: 24px;
-    font-weight: 700;
-}
-img{
-    width: 280px;
-    height: 280px;
+  img {
+    width: 220px;
+    max-width: 100%;
     cursor: pointer;
-}
+  }
 
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
 `;

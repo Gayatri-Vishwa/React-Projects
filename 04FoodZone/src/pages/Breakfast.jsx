@@ -1,37 +1,42 @@
-import React from 'react'
-import Card from '../components/Card'
-import foodData from '../../data'
-
+import React from "react";
+import Card from "../components/Card";
+import foodData from "../../data";
 
 function Breakfast() {
-const filteredData=foodData.filter((item)=> item.type=='breakfast')
+  // Filter breakfast items
+  const filteredData = foodData.filter((item) => item.type === "breakfast");
 
   return (
-     <div   
-    className="w-full h-[100vh]  bg-cover bg-center  flex justify-center"
-  style={{ backgroundImage: `url(${'./bg.png'})` }}
-  >
-
-
-    <div className='w-[70%] mt-22 flex flex-wrap justify-center px-auto gap-x-6   '>
-    {/* <div className='w-[70%] mt-22 mx-auto px-auto gap-x-6   grid grid-cols-3 gap-0'> */}
-      {filteredData.map((item,idx)=>(
-        <div key={idx} className=' h-[180px] '>
-          <Card img={item.image} name={item.name}  price={item.price}   text={item.text} />
-        </div>
-      
-      ))}
+    <div
+      className="w-full min-h-screen bg-cover bg-center flex justify-center overflow-x-hidden"
+      style={{ backgroundImage: `url('./bg.png')` }}
+    >
+      <div
+        className="
+          w-full
+          max-w-7xl
+          px-4
+          py-6
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-3
+          gap-x-4
+          gap-y-6
+        "
+      >
+        {filteredData.map((item, idx) => (
+          <Card
+            key={idx}
+            img={item.image}
+            name={item.name}
+            price={item.price}
+            text={item.text}
+          />
+        ))}
+      </div>
     </div>
-     
-    </div>
-
-
-
-
-  )
+  );
 }
 
-export default Breakfast
-
-
-
+export default Breakfast;
